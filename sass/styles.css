@@ -1,0 +1,204 @@
+.linea-sombreada {
+  background-image: linear-gradient(to right, #FF8F00, #fdd196);
+  width: 70%;
+  height: 1px;
+}
+
+.habilidades-generales {
+  color: #FF8F00;
+}
+
+.empresa-respuesta {
+  color: #acacac;
+}
+
+.periodo {
+  color: #4d9696;
+  margin-left: 30%;
+}
+
+.habilidades {
+  margin-right: 5%;
+}
+
+.educacion {
+  margin-left: 57%;
+}
+
+.experiencia {
+  margin-left: 2%;
+}
+
+.sidebar {
+  background-color: #477979;
+  color: #ecffff;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  padding-left: 1%;
+  font: -webkit-small-control;
+}
+
+.fotoPerfil {
+  max-width: 50%;
+  height: auto;
+  margin-left: 25%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.sidebar2 {
+  background-color: #477979;
+  color: #ecffff;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 20px;
+  padding-left: 1%;
+  font: -webkit-small-control;
+}
+
+.titulo-generales {
+  text-align: center;
+}
+
+.subtitulo-generales {
+  text-align: center;
+}
+
+.datos-generales {
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: white;
+}
+
+.barra-progreso {
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progreso80 {
+  width: 80%;
+  background-color: #4caf50;
+  height: 17px;
+  text-align: right;
+}
+
+.progreso70 {
+  width: 70%;
+  background-color: #4caf50;
+  height: 17px;
+  text-align: right;
+}
+
+.progreso30 {
+  width: 20%;
+  background-color: #4caf50;
+  height: 17px;
+  text-align: right;
+}
+
+.content {
+  margin-left: 300px;
+  padding: 20px;
+  margin-right: 25%;
+  font: -webkit-small-control;
+}
+
+.encabezado-experiencia {
+  margin-bottom: 1%;
+}
+
+.habilidades-titulo {
+  color: #FF8F00;
+  font-size: large;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.lista {
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  margin-bottom: 5px;
+  padding-left: 10px;
+  background: url("bullet.png") no-repeat left center;
+  list-style-type: none;
+}
+
+.toggle-button {
+  display: none;
+}
+
+.descargar-btn {
+  position: fixed;
+  display: flex;
+  right: 18%;
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    left: -300px;
+    padding-left: 2%;
+    font: -webkit-small-control;
+  }
+  .descargar-btn {
+    position: fixed;
+    display: flex;
+    right: 25%;
+    top: 95%;
+  }
+  .sidebar2 {
+    right: 0%;
+    padding-left: 2%;
+    font: -webkit-small-control;
+    width: 25%;
+  }
+  .periodo {
+    color: #4d9696;
+    margin-left: 5%;
+  }
+  .educacion {
+    margin-left: 2%;
+  }
+  .content {
+    margin-left: 0;
+  }
+  .toggle-button {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

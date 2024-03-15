@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ejercicio practico</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        p {
+            background-color: #747474;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1 class="encabezado">Parte 2: Ejercicio Práctico</h1>
+        <P class="parrafo" id="parrafo">
+            Prueba front-end para Key Recruitment & Consulting :
+            Crea una página web simple con un encabezado, un párrafo de texto y un botón.
+        </P>
+        <button class="boton" onclick="cambiarColor()">Cambiar color de fondo</button>
+    </div>
+    <script>
+        function cambiarColor() {
+            var parrafo = document.getElementById("parrafo");
+
+            colorAleatorio = Math.floor(Math.random() * 0xFFFFFF).toString(16);
+            parrafo.style.backgroundColor = "#" + colorAleatorio;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra Lateral Estática con Botón</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <div class="main-content" id="main-content">
+    <div class="sidebar" id="sidebar">
+      <h2 class="titulo-generales">SALVADOR ROMERO AGUILAR</h2>
+      <hr class="linea-sombreada">
+      <div class="subtitulo-generales">INGENIERO EN SISTEMAS COMPUTACIONALES</div>
+      <br>
+      <div class="subtitulo-generales"><b>AZCAPOTZALCO, CDMX</b></div>
+      <br>
+      <div class="datos-generales"><a href="mailto:salvador.romaguilar@gmail.com" target="_blank" class="nav-link"><svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at"
+            viewBox="0 0 16 16">
+            <path
+              d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
+            <path
+              d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+          </svg> salvador.romaguilar@gmail.com</a></div>
+      <div class="datos-generales">
+        <a href="tel:+525654207535" target="_blank" class="nav-link"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+            height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+            <path
+              d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+          </svg> 56 5420 7535</a>
+      </div>
+      <div class="datos-generales"> <a href="https://wa.me/525567920305" class="nav-link" target="_blank"><svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp"
+            viewBox="0 0 16 16">
+            <path
+              d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+          </svg> 55 6702 0305</a></div>
+      <hr class="linea-sombreada">
+      <div class="habilidades">
+        <div class="habilidades-titulo"><b>Habilidades</b></div>
+        <div class="habilidad">JavaScript</div>
+        <div class="barra-progreso">
+          <div class="progreso80">80%</div>
+        </div>
+        <div class="habilidad">PHP</div>
+        <div class="barra-progreso">
+          <div class="progreso80">80%</div>
+        </div>
+        <div class="habilidad">Java</div>
+        <div class="barra-progreso">
+          <div class="progreso70">70%</div>
+        </div>
+        <div class="habilidad">SQL</div>
+        <div class="barra-progreso">
+          <div class="progreso70">70%</div>
+        </div>
+        <div class="habilidad">C#</div>
+        <div class="barra-progreso">
+          <div class="progreso30">30%</div>
+        </div>
+        <div class="habilidad">PYTHON</div>
+        <div class="barra-progreso">
+          <div class="progreso30">30%</div>
+        </div>
+        <div class="habilidad">4GL</div>
+        <div class="barra-progreso">
+          <div class="progreso30">30%</div>
+        </div>
+
+        <div class="habilidades-titulo"><b>Certificaciones y Cursos</b></div>
+        <div class="lista">
+          <div class="item"> Desarrollo de plataformas seguras en plataformas Web
+            <br><b>Institución:</b> Sygno
+          </div>
+          <div class="item"> Desarrollo de Aplicaciones con React Js
+            <br><b>Institución:</b> Sygno
+          </div>
+          <div class="item"> Scrum Fundamentals Certified
+            <br><b>Institución:</b> Scrum Study
+          </div>
+          <div class="item"> Scrum Master Certified
+            <br><b>Institución:</b> Scrum Study
+          </div>
+          <div class="item"> PHP de cero a experto Bootcamp,
+            incluye conexión con MySQL.
+            <br><b>Institución:</b> Udemy
+          </div>
+
+          <div class="item"> Aprende Javascript ES9, HTML,
+            CSS3 y NodeJS desde cero.
+            <br><b>Institución:</b> Udemy
+          </div>
+
+          <div class="item"> Envió Masivo de Correos
+            Electrónicos con PHP, MySQL Y JS.
+            <br><b>Institución:</b> Udemy
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="content" id="content">
+      <div class="descargar-btn">
+        <button type="button" class="btn btn-success " onclick="descargarPDF()">Descargar PDF</button>
+      </div>
+      <button type="button" class="  toggle-button " onclick="toggleSidebar()">Ver Datos Generales</button>
+      <div class="educacion">
+        <div>
+        </div>
+        <div>
+          <p></p>
+          <h3>Instituto Tecnologico Superior de Libres, Puebla</h3>
+          <h3> 2008 a 2013 (TITULADO)</h3>
+        </div>
+        <div>
+          <h3>Idiomas
+            Ingres - Intermedio
+        </div>
+        </h3>
+      </div>
+      <hr>
+      <div class="experiencias">
+        <h3>EXPERIENCIA LABORAL</h3>
+        <div class="experiencia">
+          <div class="encabezado-experiencia">
+            <div><b>EMPRESA:</b> <b class="empresa-respuesta">Planet Media</b> <b class="periodo"> Octubre 2022 --
+                Diciembre 2023</b>
+            </div>
+            <div><b>PROYECTO:</b> <b class="empresa-respuesta"> IFT Sistema de homologación de certificados.</b></div>
+            <div><b>ACTIVIDADES:</b></div>
+          </div>
+          <div class="lista">
+            <div class="item"> -Analisis a detalle de las historias de usuario requeridas, para establecer los tiempos
+              por proceso y
+              asignacion de las tareas
+            </div>
+            <div class="item"> -Definicion del requerimiento en conjunto con todo el equipo involucrado para definir
+              tiempos y tareas
+              de los miembros del equipo.
+            </div>
+            <div class="item"> -Capacitaciones e inducciones a JEE, Spring Boot</div>
+            <div class="item"> -Desarrollo del Back -end de los servicios involucrados en el proyecto utilizando el
+              framework
+              SpringBoot
+            </div>
+            <div class="item"> -Manejo de Git en un entorno de desarrollo.</div>
+            <div class="item"> -Desarrollo de modulos Java EE para solucion de los modulos descritos en las HU</div>
+            <div class="item"> -Manejo y conexion de JasperReports para respuesta de servicios en los que se usan
+              formatos PDF como
+              salida
+            </div>
+            <div class="item"> -Manejo y desarrollo con el modulo de JPA para el desarrollo de las consultas de los
+              servicios
+            </div>
+            <div class="item"> -Creacion de API REST para comunicacion con el equipo de Front-end y Dynamics</div>
+            <div class="item"> -Reuniones con equipos de Front-end y Bases de datos, para establecer y detallar la
+              interconexion de
+              componentes.
+            </div>
+          </div>
+        </div>
+        <hr class="linea-sombreada">
+        <hr class="linea-sombreada">
+        <div class="experiencia">
+          <div class="encabezado-experiencia">
+            <div><b>EMPRESA:</b> <b class="empresa-respuesta">PM Solutions </b> <b class="periodo"> Diciembre 2021 --
+                Octubre 2022
+              </b>
+            </div>
+            <div><b>PROYECTO:</b> <b class="empresa-respuesta"> Desarrollo Sistema de concurso de fotografía SEGOB
+                Intranet
+                PRODECON.</b>
+            </div>
+            <div><b>ACTIVIDADES:</b></div>
+          </div>
+          <div class="lista">
+            <div class="item"> -Análisis del requerimiento en conjunto con el equipo de desarrollo y P.M. del
+              proyecto en base a la petición del Usuario, esto para establecer los alcances del
+              proyecto.
+            </div>
+            <div class="item"> -Levantamiento de ambiente de desarrollo utilizando la herramienta Laragon para
+              la virtualización del proyecto.
+            </div>
+            <div class="item"> -Clonación de repositorio de desarrollo con el proyecto de PHP+Laravel .
+            </div>
+            <div class="item"> -Lógica de desarrollo para la limitación y detección de usuarios duplicados por
+              email.
+            </div>
+            <div class="item"> -Lógica de desarrollo en las vistas del formulario principal para la validación de las
+              reglas de operación de la secretaria de gobernación.
+            </div>
+            <div class="item"> -Creación de Dashboard de los usuarios jueces del concurso usando HTML+
+              Javascript + Bootstrap.
+            </div>
+            <div class="item"> -Creación de servicio REST en Javascript para consultar los datos del concurso y
+              presentarlos dando formatos con CSS apegados al diseño solicitado por la
+              secretaria de gobernación.
+            </div>
+            <div class="item"> -Desarrollo de lógica para asignación de calificación y acumulados para la
+              determinación de ganadores apegado a las reglas del concurso.
+            </div>
+            <div class="item"> -Instalación en el proyecto de librerías para reporteo para exportación de archivos
+              en Excel y PDF
+            </div>
+            <div class="item"> -Cambio de la intranet actual de la PRODECON desarrollada con Yoomla añadiendo
+              además nuevas funciones y módulos de las distintas procuradurías
+            </div>
+            <div class="item"> -Reuniones de levantamiento de requerimiento con las diferentes áreas de la
+              PRODECON.
+            </div>
+            <div class="item"> -Elaboración y presentación del diseño a las distintas áreas, detallando toda la
+              estructura y funcionalidad de la intranet por cada área.
+            </div>
+            <div class="item"> -Levantamiento del entorno para el desarrollo usando Laragon para la
+              virtualización y PHP+Wordpress para el desarrollo de la intranet
+            </div>
+            <div class="item"> -Instalación de los plugins necesarios, cómo calendarios con eventos, buscadores
+              de archivos, y menús que cumplieran con una buena experiencia de usuario.
+            </div>
+          </div>
+        </div>
+        <hr class="linea-sombreada">
+        <hr class="linea-sombreada">
+        <div class="experiencia">
+          <div class="encabezado-experiencia">
+            <div><b>EMPRESA:</b> <b class="empresa-respuesta">Ingenia Agency </b> <b class="periodo"> Julio 2020 --
+                Diciembre 2021
+              </b>
+            </div>
+            <div><b>PROYECTO:</b> <b class="empresa-respuesta"> Desarrollo Usando CMS</b></div>
+            <div><b>ACTIVIDADES:</b></div>
+          </div>
+          <div class="lista">
+            <div class="item"> -Instalación de entorno de desarrollo para la implementación del sitio web de Workhub,
+              además de la clonación del proyecto con GitHub
+            </div>
+            <div class="item"> -Instalación de extensiones necesarias para el manejo de notificaciones en los
+              formularios
+              de Workhub usando PHP+Wordpress
+            </div>
+            <div class="item"> -Desarrollo de Back-end del sitio web de salud del TECNOLÓGICO DE MONTERREY.
+            </div>
+            <div class="item"> -Clonación del repositorio con los avances del proyecto usando la herramienta de GitHub
+            </div>
+            <div class="item"> -Desarrollo en Drupal para el correcto despliegue de la estructura del sitio usando las
+              diversas herramientas como Taxonomías, Relaciones, Vistas.
+            </div>
+            <div class="item"> -Adecuación de la configuración de las vistas de Drupal para conectar todo el Back-end
+              con
+              el Front-end y así poder el formato correcto en el sitio.
+            </div>
+            <div class="item"> -Envío del proyecto mediante un repositorio de GitHub al equipo de TI de la organización
+              para el despliegue en producción del proyecto
+            </div>
+            <div class="item"> -Brindar al usuario de Tec Salud, un servicio de capacitación oportuno, efectivo y de
+              alta
+              calidad en lo relacionado al flujo del sitio y creación de los contenidos.
+            </div>
+            <div class="item"> -Dar soporte a la aplicacion, de acuerdo a las necesidades detectadas en el tiempo de
+              garantía del proyecto
+            </div>
+            <div class="item"> -Clonación del proyecto con los avances realizados para el sistema de proveedores de
+              GRUPO BIMBO mediante Githu.
+            </div>
+            <div class="item"> -Implementación de un formulario de registro y actualización de datos para los
+              proveedores logueados en el sistema.
+            </div>
+            <div class="item"> -Implementación de servicios REST para la consulta de l combos en los formularios.
+            </div>
+            <div class="item"> -Implementación del Back-end de los distintos contenidos del sitio.
+            </div>
+            <div class="item"> -Conexión de las vistas de Drupal con el Front-end realizado para la correcta
+              visualización.
+            </div>
+          </div>
+        </div>
+        <hr class="linea-sombreada">
+        <hr class="linea-sombreada">
+        <div class="experiencia">
+          <div class="encabezado-experiencia">
+            <div><b>EMPRESA:</b> <b class="empresa-respuesta">Itera Process </b> <b class="periodo"> Agosto 2019- Abril
+                -2020
+              </b>
+            </div>
+            <div><b>PROYECTO:</b> <b class="empresa-respuesta"> ERP CONTABLE, Mantenimiento e Implementaciones.
+              </b>
+            </div>
+            <div><b>ACTIVIDADES:</b></div>
+          </div>
+          <div class="lista">
+            <div class="item"> -Levantamiento del requerimiento con el equipo de ventas para crear un módulo de
+              almacenes en el OordenERP.
+            </div>
+            <div class="item"> -Definición, alcance y diseño para el nuevo módulo de almacenes, en conjunto con líder
+              inmediato y CEO de la empresa
+            </div>
+            <div class="item"> -Creación de tareas mediante la metodología de scrum para la implementación del
+              módulo.
+            </div>
+            <div class="item"> -Módulo de gestión de almacenes para ERP contable Orden usando PHP+Pahlco y
+              componentes de Vue.js
+            </div>
+            <div class="item"> -Implementación de modelo Phalcon de almacenes relacionados con los diferentes
+              productos existentes
+            </div>
+            <div class="item"> -Lógica en el controlador en Phalcon de almacenes para asignación de productos.
+            </div>
+            <div class="item"> -Creación de servicio Rest y manipulación de la información en el front-end con Vue.js y
+              JS
+              para cada consulta del algún almacén
+            </div>
+            <div class="item"> -Micro servicio implementado con NodeJS y ExpressJS para mejorar el ERP.
+            </div>
+            <div class="item"> -Lógica de programación en NodeJS para la repolizacion usando tablas temporales no
+              relaciones con Redis.
+            </div>
+            <div class="item"> -Creación de un componente que consulta mediante un servicio REST el estatus para
+              validar el proceso de repolizacion.
+            </div>
+          </div>
+        </div>
+        <hr class="linea-sombreada">
+        <hr class="linea-sombreada">
+        <div class="experiencia">
+          <div class="encabezado-experiencia">
+            <div><b>EMPRESA:</b> <b class="empresa-respuesta">Maxcom </b> <b class="periodo"> Diciembre
+                2018-Agosto 2019
+              </b>
+            </div>
+            <div><b>PROYECTO:</b> <b class="empresa-respuesta"> Implementaciones SugarCRM.</b></div>
+            <div><b>ACTIVIDADES:</b></div>
+          </div>
+          <div class="lista">
+            <div class="item"> -Instalación de entorno de desarrollo usando Vagrant para la visualización del servidor y
+              PHP junto con las expresiones necesarias para el módulo
+            </div>
+            <div class="item"> -Clonación del proyecto utilizando SugarCRM mediante un servicio de FTP
+            </div>
+            <div class="item"> -Reuniones de levantamiento de requerimiento con Ingeniería del proyecto para
+              implementar un cotizador, tomado en cuenta las reglas de operación de MAXCOM
+              TELECOMUNICACIONES.
+            </div>
+            <div class="item"> -Análisis y diseño del módulo de cotizaciones en conjunto con jefe de desarrollo para
+              establecer alcance tareas y tiempo de entrega.
+            </div>
+            <div class="item"> -Análisis de insistencias respecto al servicio de facturas conectado al CRM
+            </div>
+            <div class="item"> -Reuniones para validar el funcionamiento con empresa encargada del servicio SOAP de
+              facturación.
+            </div>
+            <div class="item"> -Replicación en entorno de desarrollo con las fallas del XML de la factura para la
+              detección del
+              error y poder dar solución, mediante una nueva validación y acomodo de los datos.
+            </div>
+          </div>
+        </div>
+        <hr class="linea-sombreada">
+        <hr class="linea-sombreada">
+        <div class="experiencia">
+          <div class="encabezado-experiencia">
+            <div><b>EMPRESA:</b> <b class="empresa-respuesta">Elementia </b> <b class="periodo">Julio 2018 -
+                Diciembre 2018
+              </b>
+            </div>
+            <div><b>PROYECTO:</b> <b class="empresa-respuesta"> Backend, aplicaciones móviles
+              </b>
+            </div>
+            <div><b>ACTIVIDADES:</b></div>
+          </div>
+          <div class="lista">
+            <div class="item"> -Análisis en conjunto con el equipo de desarrollo de Android y iOS para
+              determinar que servicio sería requeridos para los diferentes módulos de
+              Aplicación Móvil
+            </div>
+            <div class="item"> -Análisis y diseño de la estructura de datos enviados a cada solicitud de petición
+            </div>
+            <div class="item"> -Análisis y diseño de la estructura de respuesta a cada Servicio REST solicitado
+            </div>
+            <div class="item"> -Instalación de entorno local usando Vagrant y PHP+Yii2 para la creación de los
+              servicios REST
+            </div>
+            <div class="item"> -Creación de las migraciones, modelos y de los controladores en YIi2 necesarios
+              en el proyecto.
+            </div>
+            <div class="item"> -Creación de End Points en con YII2 para servir a cada petición.
+            </div>
+            <div class="item"> -Desarrollo de Dashboard para los roles supervisores del uso de aplicación
+              utilizando Ajax para consultar los servicios REST y poder mostrar lo contenido
+              que se registra mediante las aplicaciones móviles, para las vistas se usa
+              Bootstrap, CSS, y HTML5
+            </div>
+            <div class="item"> -Reuniones con P.M. para optimización de reporteo para el área comercial, para
+              esto con consultas SQL directas en SQL Server 2012
+            </div>
+            <div class="item"> -Gestión de estadísticas de las aplicaciones móviles usadas esto con servicios de
+              Google con Firebase y consultas de tablas no relacionales en servicio de
+              BigTable.
+            </div>
+          </div>
+        </div>
+        <hr class="linea-sombreada">
+        <hr class="linea-sombreada">
+        <div class="experiencia">
+          <div class="encabezado-experiencia">
+            <div><b>EMPRESA:</b> <b class="empresa-respuesta">: Itera Process </b> <b class="periodo">Mayo 2016 – Julio
+                2018
+              </b>
+            </div>
+            <div><b>PROYECTO:</b> <b class="empresa-respuesta"> CRM propio, Mantenimiento e Implementaciones</b></div>
+            <div><b>ACTIVIDADES:</b></div>
+          </div>
+          <div class="lista">
+            <div class="item"> -Análisis de largo tiempo de espera en proceso de CRM de ITERA PROCESS ,
+              detectando que el diseñador de código en que fue programado crea demasiados
+              proceso que no son de utilidad.
+            </div>
+            <div class="item"> -Diseño y creación de tareas para el mejoramiento del CRM,
+            </div>
+            <div class="item"> -Mejoramiento del rendimiento de CRM haciendo una migración del diseñador
+              de código de PHP a uso del framework Phalcon.
+            </div>
+            <div class="item"> -Creación de los modelos, controladores y vistas para los módulos Marketing,
+              Logística, Facturación del CRM.
+            </div>
+            <div class="item"> -Análisis para la atención a solicitud de reportes especiales al área TI usando
+              consultas directamente en MariaDB y entregando reportes en Excel.
+            </div>
+            <div class="item"> -Reuniones con el equipo de Marketing para levantamiento de requerimiento
+              para mejorar la captura de oportunidades
+            </div>
+            <div class="item"> -Diseño y creación de tareas del nuevo módulo de seguimiento de
+              oportunidades
+            </div>
+            <div class="item"> -Instalación en el proyecto de las librerías de Javascript JTable para el reporteo
+              de las oportunidades
+            </div>
+            <div class="item"> -Aumento de captura de oportunidades en campañas de Marketing al igual que
+              su seguimiento y mayor visibilidad
+            </div>
+          </div>
+        </div>
+        <hr class="linea-sombreada">
+        <hr class="linea-sombreada">
+        <div class="experiencia">
+          <div class="encabezado-experiencia">
+            <div><b>EMPRESA:</b> <b class="empresa-respuesta">EGlobal </b> <b class="periodo">Marzo 2013- Abril 2016
+              </b>
+            </div>
+            <div><b>PROYECTO:</b> <b class="empresa-respuesta"> Soporte a Aplicaciones de conciliación</b></div>
+            <div><b>ACTIVIDADES:</b></div>
+          </div>
+          <div class="lista">
+            <div class="item"> -Análisis de la Data obtenida por los servicios, esto debido a los descuadres de la
+              conciliación.
+            </div>
+            <div class="item"> -Replica de las cuentas bancarias que presentaban errores en su cadena de datos
+              para corregir o aumentar el catálogo de las cuentas
+            </div>
+            <div class="item"> -Modificación de las consultas a partir del análisis para la baja en incidencias en
+              el área de conciliación.
+            </div>
+            <div class="item"> -Consultas en Informix4GL atendiendo a reportes especiales para el área de
+              Batch Internacional.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar2" id="sidebar2">
+      <div class="habilidades">
+        <div class="habilidades-titulo"><b>Herramientas</b></div>
+        <div class="habilidad">HTML</div>
+        <div class="barra-progreso">
+          <div class="progreso80">80%</div>
+        </div>
+        <div class="habilidad">Git</div>
+        <div class="barra-progreso">
+          <div class="progreso80">80%</div>
+        </div>
+        <div class="habilidad">Node.js</div>
+        <div class="barra-progreso">
+          <div class="progreso80">80%</div>
+        </div>
+        <div class="habilidad">jQuery</div>
+        <div class="barra-progreso">
+          <div class="progreso70">70%</div>
+        </div>
+        <div class="habilidad">Bootstrap</div>
+        <div class="barra-progreso">
+          <div class="progreso70">70%</div>
+        </div>
+        <div class="habilidad">SpringBoot</div>
+        <div class="barra-progreso">
+          <div class="progreso70">70%</div>
+        </div>
+        <div class="habilidad">Css</div>
+        <div class="barra-progreso">
+          <div class="progreso70">70%</div>
+        </div>
+        <div class="habilidad">Laravel</div>
+        <div class="barra-progreso">
+          <div class="progreso70">70%</div>
+        </div>
+        <div class="habilidad">Vue.js</div>
+        <div class="barra-progreso">
+          <div class="progreso70">70%</div>
+        </div>
+        <div class="habilidad">Express.Js</div>
+        <div class="barra-progreso">
+          <div class="progreso30">30%</div>
+        </div>
+        <div class="habilidad">Phalcon</div>
+        <div class="barra-progreso">
+          <div class="progreso30">30%</div>
+        </div>
+        <div class="habilidad">Hibernate</div>
+        <div class="barra-progreso">
+          <div class="progreso30">30%</div>
+        </div>
+      </div>
+      <div class="habilidades">
+        <div class="habilidades-titulo"><b>Bases de Datos</b></div>
+        <div class="habilidad">Mysql</div>
+        <div class="barra-progreso">
+          <div class="progreso80">80%</div>
+        </div>
+        <div class="habilidad">Sql Server</div>
+        <div class="barra-progreso">
+          <div class="progreso70">70%</div>
+        </div>
+        <div class="habilidad">Oracle</div>
+        <div class="barra-progreso">
+          <div class="progreso70">70%</div>
+        </div>
+        <div class="habilidad">Redis</div>
+        <div class="barra-progreso">
+          <div class="progreso30">30%</div>
+        </div>
+      </div>
+      <div class="habilidades">
+        <div class="habilidades-titulo"><b>Sistemas Operativos</b></div>
+        <div class="habilidad">Windows</div>
+        <div class="barra-progreso">
+          <div class="progreso80">80%</div>
+        </div>
+        <div class="habilidad">Linux</div>
+        <div class="barra-progreso">
+          <div class="progreso70">70%</div>
+        </div>
+        <div class="habilidad">Unix</div>
+        <div class="barra-progreso">
+          <div class="progreso30">30%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function descargarPDF() {
+      const doc = new jsPDF();
+      var elementHTML = $('#main-content').html();
+      var specialElementHandlers = {
+        '#experiencia': function (element, renderer) {
+          return true;
+        }
+      };
+      doc.fromHTML(elementHTML, 15, 15, {
+        'width': 170,
+        'elementHandlers': specialElementHandlers
+      });
+      doc.save('sample-document.pdf');
+    }
+  </script>
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.getElementById('sidebar');
+      var sidebar2 = document.getElementById('sidebar2');
+      if (sidebar.style.left === '0px') {
+        sidebar.style.left = -sidebar.offsetWidth + 'px';
+      } else {
+        sidebar.style.left = '0px';
+      }
+    }
+  </script>
+</body>
+
+</html>

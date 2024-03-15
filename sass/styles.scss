@@ -1,0 +1,251 @@
+// styles.scss
+
+$ancho-sidebar: 300px; 
+$ancho-sidebar2: 15%; 
+$color-verde-letras: #ecffff;
+$color-periodo: #4d9696;
+$height-barra: 17px;
+
+$color1: #FF8F00; 
+$color2: #fdd196; 
+$color3: #acacac; 
+$color-texto-subtitulo: $color-verde-letras; 
+$ancho: 70%; 
+$altura: 1px; 
+
+.linea-sombreada {
+  background-image: linear-gradient(to right, $color1, $color2); 
+  width: $ancho; 
+  height: $altura; 
+}
+
+
+.habilidades-generales {
+  color: $color1;
+}
+
+h2 {}
+
+
+
+.empresa-respuesta {
+  color: $color3;
+}
+
+.periodo {
+  color: $color-periodo;
+  margin-left: 30%;
+
+
+}
+
+.habilidades {
+  margin-right: 5%
+}
+
+.educacion {
+  margin-left: 57%;
+
+}
+
+.experiencia {
+  margin-left: 2%;
+}
+
+.sidebar {
+  background-color: #477979;
+  color: $color-verde-letras;
+  width: $ancho-sidebar;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  padding-left: 1%;
+  font: -webkit-small-control;
+
+}
+
+.fotoPerfil {
+  max-width: 50%;
+  height: auto;
+  margin-left: 25%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.sidebar2 {
+  background-color: #477979;
+  color: $color-verde-letras;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 20px;
+  padding-left: 1%;
+  font: -webkit-small-control;
+
+
+}
+
+.titulo-generales {
+  text-align: center;
+}
+
+.subtitulo-generales {
+  text-align: center;
+}
+
+.datos-generales {
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+
+.nav-link {
+      color: white;
+    }
+.barra-progreso {
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progreso80 {
+  width: 80%;
+  background-color: #4caf50;
+  height: $height-barra;
+  text-align: right;
+}
+
+.progreso70 {
+  width: 70%;
+  background-color: #4caf50;
+  height: $height-barra;
+  text-align: right;
+}
+
+.progreso30 {
+  width: 20%;
+  background-color: #4caf50;
+  height: $height-barra;
+  text-align: right;
+}
+
+
+
+
+.content {
+  margin-left: $ancho-sidebar;
+  padding: 20px;
+  margin-right: 25%;
+
+  font: -webkit-small-control;
+}
+
+.encabezado-experiencia {
+  margin-bottom: 1%;
+}
+
+.habilidades-titulo {
+  color: $color1;
+  font-size: large;
+  text-align: center;
+  margin-top: 10%;
+
+}
+
+.lista {
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  margin-bottom: 5px;
+  padding-left: 10px;
+  background: url('bullet.png') no-repeat left center;
+  list-style-type: none;
+}
+
+.toggle-button {
+  display: none; 
+}
+
+ .descargar-btn{
+  position: fixed;
+    display: flex;
+    right: 18%;
+  }
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    left: -($ancho-sidebar); 
+    padding-left: 2%;
+    font: -webkit-small-control;
+
+
+  }
+
+ .descargar-btn{
+  position: fixed;
+    display: flex;
+    right: 25%;
+    top: 95%;
+  }
+
+
+
+
+  .sidebar2 {
+
+    right: 0%; 
+    padding-left: 2%;
+    font: -webkit-small-control;
+    width: 25%;
+
+
+  }
+
+
+  .periodo {
+    color: $color-periodo;
+    margin-left: 5%;
+
+
+  }
+
+  .educacion {
+    margin-left: 2%;
+
+  }
+
+  .content {
+    margin-left: 0; 
+  }
+
+  .toggle-button {
+    display: block; 
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999; 
+    color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+  }
+}
